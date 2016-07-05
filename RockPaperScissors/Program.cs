@@ -10,11 +10,10 @@ namespace RockPaperScissors
     {
         static Dictionary<string, IPlayer> AIPlayers = new Dictionary<string, IPlayer>()
         {
-            // TODO:
-            // Add AIs by filling in lines like the ones below
-            //{ "Random 1", new RandomAI() },
-            //{ "Random 2", new RandomAI() },
-            //{ "Other", new OtherAI() },
+             
+            { "Yoda", new RandomAI() },
+            { "C3PO", new StubbornAI() },
+            { "R2D2", new ShortAttentionSpanAI() },
             //{ "YetAnother", new YetAnotherAI() },
         };
 
@@ -28,6 +27,11 @@ namespace RockPaperScissors
             }
             while (true)
             {
+                Console.WriteLine("Virtual Rock, Paper, Scissors...Star Wars Addition");
+                Console.WriteLine("Play against Yoda, C3PO, or R2D2");
+                Console.WriteLine("Hit any key to continue.");
+                Console.ReadKey();
+
                 Console.WriteLine("\n1. Human vs AI");
                 Console.WriteLine("2. AI vs AI");
                 Console.WriteLine("3. Quit");
